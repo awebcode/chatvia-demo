@@ -27,7 +27,10 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", api);
-
+app.get("/", (req, res) => {
+  console.log("Chatvia Node server is running");
+  res.send("Chatvia Node server is running"); // Send a response to the client
+});
 app.use(errorHandler.notFound);
 app.use(errorHandler.errorHandler);
 
@@ -74,5 +77,6 @@ process.on("uncaughtException", (error) => {
 
   process.exit();
 });
-app.get("/",()=>{console.log("Chatvia Node server is running")})
+
+
 module.exports = { app };
