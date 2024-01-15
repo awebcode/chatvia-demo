@@ -74,5 +74,5 @@ process.on("uncaughtException", (error) => {
 
   process.exit();
 });
-
+app.get("/",()=>{console.log("Chatvia Node server is running")})
 module.exports = { app };
