@@ -1,0 +1,15 @@
+.flex-center {
+    @apply flex justify-center items-center;
+}
+
+.hover-gray {
+    @apply hover:bg-gray-200 transition ease-in-out delay-0;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.radius-circle {
+    border-radius: 50%;
+}

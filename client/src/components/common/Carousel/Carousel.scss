@@ -1,0 +1,25 @@
+@import "../../../assets/styles/index.scss";
+
+.carousel {
+    padding: 1rem 0;
+
+    .swiper-slide {
+        width: auto;
+
+        cursor: pointer;
+
+        .carousel-item {
+            background: #e6ebf5;
+
+            &.isFetching {
+                background: none;
+            }
+
+            .MuiBadge-root {
+                position: relative;
+
+                top: -1.5rem;
+            }
+        }
+    }
+}

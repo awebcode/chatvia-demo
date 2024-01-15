@@ -1,0 +1,17 @@
+.input-field {
+    &.dark {
+        .MuiFormControl-root {
+            .MuiOutlinedInput-root {
+                color: #93a7cc;
+
+                & fieldset {
+                    border-color: #93a7cc;
+                }
+            }
+
+            .MuiInputLabel-root {
+                color: #93a7cc;
+            }
+        }
+    }
+}

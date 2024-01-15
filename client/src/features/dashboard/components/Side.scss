@@ -1,0 +1,76 @@
+@import "../../../assets/styles/index.scss";
+
+.side-info {
+    position: relative;
+
+    width: 85%;
+    height: 100%;
+
+    padding: 1.5rem;
+
+    background-color: #f5f7fb;
+    transition: all 0.3s ease-in-out;
+
+    &.dark {
+        color: #fff;
+        background-color: #303841;
+
+        transition: all 0.3s ease-in-out;
+    }
+
+    .side-header {
+        text-transform: capitalize;
+
+        h4 {
+            font-size: 1.3rem;
+        }
+    }
+
+    .side-content {
+        padding: 1rem 0;
+    }
+
+    .profile-info {
+        padding: 1.5rem;
+
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 5.9rem;
+            height: 5.9rem;
+
+            border-radius: 50%;
+        }
+
+        h5 {
+            margin-top: 1.5rem;
+            font-weight: 600;
+            line-height: 1.2rem;
+        }
+
+        p {
+            color: #7a7f9a;
+            font-size: 1rem;
+
+            .info-icon {
+                color: aquamarine;
+            }
+        }
+    }
+
+    .profile-about {
+        padding: 1.5rem;
+
+        width: 100%;
+        height: 20rem;
+
+        overflow: auto;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .side-info {
+        width: 100%;
+    }
+}

@@ -1,0 +1,16 @@
+@mixin image($width, $height, $objectFit: contain, $radius: 50%) {
+    width: $width;
+    height: $height;
+
+    object-fit: $objectFit;
+
+    border-radius: $radius;
+}
+
+@mixin line-clamp($line: 1) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    white-space: pre-wrap;
+}

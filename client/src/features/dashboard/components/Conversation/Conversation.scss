@@ -1,0 +1,197 @@
+@import "../../../../assets/styles/index.scss";
+
+.chat-header {
+    background: transparent;
+
+    &.dark {
+        .header-name {
+            h5 {
+                color: #fff;
+            }
+        }
+
+        .header-tool {
+            .tool-icon {
+                color: #93a7cc;
+            }
+        }
+    }
+
+    .header-name {
+        width: 30%;
+
+        img {
+            border-radius: 50%;
+        }
+
+        h5 {
+            .icon {
+                width: 0.6rem;
+                height: 0.6rem;
+            }
+        }
+    }
+
+    .header-tool {
+        width: 70%;
+    }
+}
+
+.chat-content-wrapper {
+    height: calc(100vh - 184px);
+
+    .chat-item-wrapper {
+        &.right {
+            justify-content: flex-end;
+
+            .chat-content {
+                .chat-text-wrap {
+                    .chat-text-content {
+                        border-radius: 0.5rem 0.5rem 0rem 0.5rem;
+
+                        &::before {
+                            border-bottom: 5px solid transparent;
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid #7269ef;
+                            border-right-color: #7269ef;
+                            border-top: 5px solid #7269ef;
+                            border-top-color: #7269ef;
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+
+                .chat-name {
+                    text-align: right;
+                }
+            }
+        }
+
+        .chat-avatar {
+            position: relative;
+
+            img {
+                @include image(2.25rem, 2.25rem);
+            }
+        }
+
+        .chat-content {
+            width: 41rem;
+
+            .chat-text-wrap {
+                width: 100%;
+
+                .chat-text-content {
+                    position: relative;
+
+                    background-color: #7269ef;
+
+                    padding: 0.75rem 1.25rem;
+
+                    border-radius: 0.5rem 0.5rem 0.5rem 0;
+
+                    .chat-text {
+                        width: 100%;
+
+                        font-size: 0.9rem;
+                        color: #fff;
+
+                        text-align: left;
+                    }
+
+                    .chat-time {
+                        width: 100%;
+
+                        font-size: 0.75rem;
+                        color: #ccc;
+
+                        margin: 0.25rem 0 0;
+                    }
+
+                    &::before {
+                        border-bottom: 5px solid transparent;
+                        border-left: 5px solid #7269ef;
+                        border-left-color: #7269ef;
+                        border-right: 5px solid transparent;
+                        border-top: 5px solid #7269ef;
+                        border-top-color: #7269ef;
+                        bottom: -8px;
+                        content: "";
+                        left: 0;
+                        position: absolute;
+                        right: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.chat-input-section {
+    border-top: 0.01rem solid #f0eff5;
+
+    padding: 1.2rem 1.5rem;
+
+    &.files {
+        position: absolute;
+
+        width: 95%;
+
+        bottom: -5rem;
+    }
+
+    .block-button {
+        background-color: rgb(244, 244, 244);
+        margin: 0 0.5rem;
+        color: #000;
+        font-weight: 600;
+
+        text-transform: capitalize;
+
+        &:hover {
+            background-color: rgba(244, 244, 244, 0.9);
+        }
+    }
+
+    &.dark {
+        border-top: 0.01rem solid #93a7cc;
+
+        .textfield {
+            ::placeholder,
+            label {
+                color: #93a7cc;
+            }
+
+            .MuiOutlinedInput-root {
+                color: #93a7cc;
+
+                & fieldset {
+                    border-color: #93a7cc;
+                }
+            }
+        }
+    }
+
+    .textfield {
+        width: 70%;
+    }
+
+    .chat-section-tool {
+        width: 30%;
+
+        &.dark {
+            .section-tool {
+                .icon {
+                    color: #93a7cc;
+                }
+            }
+        }
+
+        .send-icon {
+            border-radius: 0.5rem;
+            background-color: #7269ef;
+            color: #fff;
+        }
+    }
+}

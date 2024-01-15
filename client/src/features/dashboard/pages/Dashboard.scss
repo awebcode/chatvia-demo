@@ -1,0 +1,120 @@
+.dashboard-container {
+    .dashboard-side {
+        width: 30%;
+
+        .dashboard-side-menu {
+            position: relative;
+
+            width: 15%;
+            height: 100%;
+
+            box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
+
+            z-index: 9;
+
+            transition: background 0.3s ease-in-out;
+
+            &.dark {
+                background: #36404a;
+
+                transition: background 0.3s ease-in-out;
+            }
+
+            .side-menu-logo {
+                width: 100%;
+                height: 4.4rem;
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+
+            .side-menu-pills {
+                .pills-item {
+                    margin: 0 auto 1rem auto;
+
+                    .isActive {
+                        color: #7269ef;
+                    }
+                }
+            }
+        }
+    }
+
+    .dashboard-chat {
+        width: 70%;
+
+        box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
+
+        &.dark {
+            background: #262e35;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .dashboard-container {
+        overflow: hidden;
+
+        .dashboard-side {
+            width: 100%;
+
+            .dashboard-side-menu {
+                position: absolute;
+
+                width: 100%;
+                height: auto;
+
+                bottom: 0;
+
+                display: flex;
+                flex-direction: row;
+
+                .side-menu-pills {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+
+                    padding: 0.5rem 2rem;
+
+                    .pills-item {
+                        margin: auto;
+                    }
+                }
+            }
+        }
+
+        .dashboard-chat {
+            position: absolute;
+
+            width: 100%;
+
+            right: 200%;
+
+            transition: right 0.5s;
+
+            &.active {
+                right: 0;
+
+                z-index: 10;
+            }
+
+            .appbar {
+                background-color: transparent;
+
+                visibility: hidden;
+                opacity: 0;
+
+                transition:
+                    visibility 0s,
+                    opacity 0.5s linear;
+
+                &.active {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

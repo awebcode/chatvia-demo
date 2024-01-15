@@ -1,0 +1,8 @@
+.badge-container {
+    background-color: rgba(244, 215, 226, 0.9);
+    color: #ef476f;
+
+    &.dark {
+        background-color: rgba(66, 47, 58, 1);
+    }
+}

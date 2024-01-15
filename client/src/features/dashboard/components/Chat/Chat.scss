@@ -1,0 +1,43 @@
+@import "../../../../assets/styles/index.scss";
+
+.chat-recent {
+    .chat-recent-list {
+        height: calc(80vh - 200px);
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .chat-recent-item {
+            background: transparent;
+
+            padding: 0.9rem 1rem;
+
+            &.isActive {
+                background-color: rgba(230, 235, 245, 0.8);
+
+                &.dark {
+                    background-color: rgba(255, 255, 255, 0.08);
+                }
+            }
+
+            .recent-msg {
+                padding: 0 1rem;
+
+                text-transform: none;
+
+                h5 {
+                    font-size: 0.9rem;
+
+                    @include line-clamp;
+                }
+
+                p {
+                    font-size: 0.8rem;
+
+                    @include line-clamp;
+                }
+            }
+        }
+    }
+}
